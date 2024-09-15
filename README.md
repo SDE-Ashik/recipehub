@@ -37,7 +37,7 @@
 </head>
 <body>
     <h1>RecipeHub</h1>
-    <p>RecipeHub is a Flutter application designed to help users discover and view recipes. The app allows users to filter recipes by meal type and view detailed information. It also includes a feature to toggle between English and Malayalam languages for better accessibility.</p>
+    <p>RecipeHub is a Flutter application designed to help users discover and view recipes. The app allows users to filter recipes by meal type, view detailed information, and toggle between English and Malayalam languages for better accessibility.</p>
 
     <h2>Features</h2>
     <ul>
@@ -59,7 +59,7 @@
     <p>Follow these steps to get your development environment set up:</p>
     <ol>
         <li><strong>Clone the repository:</strong></li>
-        <pre><code>git clone https://github.com/SDE-Ashik/recipehub.git</code></pre>
+        <pre><code>git clone https://github.com/your-username/recipehub.git</code></pre>
         <li><strong>Navigate to the project directory:</strong></li>
         <pre><code>cd recipehub</code></pre>
         <li><strong>Install dependencies:</strong></li>
@@ -70,9 +70,21 @@
     <ol>
         <li><strong>Translator Package:</strong>
             <p>The app uses the <code>translator</code> package to handle language translation. Make sure you have an active internet connection for translation.</p>
+            <p>Include the <code>translator</code> package in your <code>pubspec.yaml</code> file:</p>
+            <pre><code>dependencies:
+  translator: ^0.1.7</code></pre>
         </li>
         <li><strong>API Configuration:</strong>
-            <p>If you have a custom backend or API, configure it in the <code>DataService</code> class located in <code>lib/services/data_service.dart</code>.</p>
+            <p>The app uses the <a href="https://dummyjson.com">Dummy JSON</a> API to fetch recipe data. Configure the API URL in the <code>DataService</code> class located in <code>lib/services/data_service.dart</code>.</p>
+            <p>Example configuration:</p>
+            <pre><code>class DataService {
+  final String apiUrl = 'https://dummyjson.com/recipes';
+  
+  Future<List<Recipe>> getRecipes(String mealType) async {
+    final response = await http.get(Uri.parse('$apiUrl?mealType=$mealType'));
+    // Handle response...
+  }
+}</code></pre>
         </li>
     </ol>
 
@@ -120,6 +132,7 @@
     <h2>Acknowledgements</h2>
     <ul>
         <li>The <code>translator</code> package for language translation functionality.</li>
+        <li>The <a href="https://dummyjson.com">Dummy JSON</a> API for providing recipe data.</li>
         <li>Flutter and Dart for providing a robust framework for app development.</li>
     </ul>
 
