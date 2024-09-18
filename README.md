@@ -10,7 +10,7 @@
     <h1>RecipeHub 🍽️</h1>
     <p>RecipeHub is a Flutter application designed to help users discover and view recipes. It allows users to filter recipes by meal type, view detailed information, and toggle between English and Malayalam languages for enhanced accessibility.</p>
 
-<img src="https://via.placeholder.com/800x400" alt="RecipeHub Screenshot" style="max-width: 100%; height: auto; border: 1px solid #ddd; margin-bottom: 20px;">
+<img src="images\recipe.png" alt="RecipeHub Screenshot" style="max-width: 100%; height: auto; border: 1px solid #ddd; margin-bottom: 20px;">
     <h2>Features ✨</h2>
     <ul>
         <li>Browse recipes by meal type: Snack, Breakfast, Lunch, Dinner.</li>
